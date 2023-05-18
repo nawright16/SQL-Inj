@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+   
+    <link rel="stylesheet" href="style.css">
+    <title>SQL Inj</title>
+</head>
+<body>
+    <form action="/login" method="post">
+        <div class="container">
+            <label>Username</label>
+            <input type="text" name="username" required>
+        </div>
+        <div class="container">
+            <label>Password</label>
+            <input type="text" name="password" required>
+        </div>
+        <button type="submit">Login</button>
+        <script>
+            if(document.location.hash === '#unauthorized') {
+         document.write('<div class=â€œunauthorizedâ€>Invalid Username or Password</div>');
+            } else if(document.location.hash === '#error') {
+         document.write('<div class=â€œerrorâ€>An error has occured</div>');
+            }
+          </script>
+         
+
+    </form>
+    
+</body>
+</html>
